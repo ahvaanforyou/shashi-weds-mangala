@@ -64,16 +64,30 @@ export const EventsSection: React.FC = () => {
               className="event-card sticky top-[14vh] mb-[8vh] origin-top will-change-transform"
               style={{ zIndex: idx + 1 }}
             >
-              <article className="paper-card relative mx-auto min-h-[44vh] max-w-3xl overflow-hidden px-7 py-10 text-center sm:min-h-[48vh] sm:px-16 sm:py-14">
-                <span className="absolute left-6 top-5 font-display text-7xl text-gold/15 sm:text-9xl">
+              <article className="paper-card relative mx-auto min-h-[44vh] max-w-3xl overflow-hidden px-6 py-8 text-center sm:min-h-[48vh] sm:px-16 sm:py-14">
+                {/* Desktop large watermark numeral */}
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none select-none absolute left-8 top-6 font-display text-8xl md:text-9xl text-gold/15 hidden sm:block"
+                >
                   0{idx + 1}
                 </span>
+
+                {/* Mobile clean event numeral with subtle gold wings - zero text overlap */}
+                <div className="mb-3 sm:hidden flex items-center justify-center gap-2.5">
+                  <span className="h-px w-5 bg-gold/40" />
+                  <span className="font-display text-2xl text-gold-deep font-semibold tracking-widest">
+                    0{idx + 1}
+                  </span>
+                  <span className="h-px w-5 bg-gold/40" />
+                </div>
+
                 <p className="eyebrow">{event.day}</p>
-                <h3 className="mt-8 font-display text-4xl sm:text-5xl">{event.name}</h3>
-                <div className="rule-gold mx-auto mt-8 w-28" />
-                <p className="mt-8 font-title text-xl">{event.time}</p>
+                <h3 className="mt-6 sm:mt-8 font-display text-3xl sm:text-5xl">{event.name}</h3>
+                <div className="rule-gold mx-auto mt-6 sm:mt-8 w-24 sm:w-28" />
+                <p className="mt-6 sm:mt-8 font-title text-lg sm:text-xl">{event.time}</p>
                 <p className="mt-2 text-sm text-muted-foreground">{event.place}</p>
-                <p className="mx-auto mt-8 max-w-md text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                <p className="mx-auto mt-6 sm:mt-8 max-w-md text-xs uppercase tracking-[0.2em] text-muted-foreground">
                   {event.note}
                 </p>
               </article>
