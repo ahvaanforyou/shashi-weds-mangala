@@ -15,55 +15,29 @@ export const GallerySection: React.FC = () => {
       <div className="relative mx-auto max-w-5xl">
         <RevealOnScroll className="text-center">
           <p className="eyebrow">Moments</p>
-          <h2 className="mt-4 font-display text-4xl sm:text-6xl">Our gallery</h2>
+          <h2 className="mt-4 font-display text-4xl sm:text-6xl">Photo Dump</h2>
           <div className="rule-gold mx-auto mt-8 w-32" />
         </RevealOnScroll>
 
-        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
-          <div className="sm:row-span-2">
-            <figure className="group relative h-full overflow-hidden border border-gold/30 bg-muted">
-              <img
-                src={weddingConfig.gallery[0]?.image || assets.gallery1}
-                alt={weddingConfig.gallery[0]?.alt || "Gallery image 1"}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-              />
-              <span className="pointer-events-none absolute inset-3 border border-paper/25" />
-            </figure>
-          </div>
-          <div>
-            <figure className="group relative h-full overflow-hidden border border-gold/30 bg-muted">
-              <img
-                src={weddingConfig.gallery[1]?.image || assets.gallery2}
-                alt={weddingConfig.gallery[1]?.alt || "Gallery image 2"}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-              />
-              <span className="pointer-events-none absolute inset-3 border border-paper/25" />
-            </figure>
-          </div>
-          <div>
-            <figure className="group relative h-full overflow-hidden border border-gold/30 bg-muted">
-              <img
-                src={weddingConfig.gallery[2]?.image || assets.gallery3}
-                alt={weddingConfig.gallery[2]?.alt || "Gallery image 3"}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-              />
-              <span className="pointer-events-none absolute inset-3 border border-paper/25" />
-            </figure>
-          </div>
-          <div className="sm:col-span-2">
-            <figure className="group relative h-full overflow-hidden border border-gold/30 bg-muted">
-              <img
-                src={weddingConfig.gallery[3]?.image || assets.gallery4}
-                alt={weddingConfig.gallery[3]?.alt || "Gallery image 4"}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-              />
-              <span className="pointer-events-none absolute inset-3 border border-paper/25" />
-            </figure>
-          </div>
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {weddingConfig.gallery.map((item, idx) => (
+            <RevealOnScroll key={idx} delay={idx * 0.12}>
+              <figure className="group relative aspect-[3/4] overflow-hidden border border-gold/40 bg-muted shadow-[var(--shadow-card)] transition-shadow duration-500 hover:shadow-xl">
+                <img
+                  src={item.image}
+                  alt={item.alt || `Photo moment ${idx + 1}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center transition-transform duration-[1200ms] group-hover:scale-105"
+                />
+                <span className="pointer-events-none absolute inset-3 border border-paper/30" />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent p-5 text-center">
+                  <p className="font-title text-xs uppercase tracking-[0.22em] text-paper/90">
+                    {item.caption || item.alt}
+                  </p>
+                </div>
+              </figure>
+            </RevealOnScroll>
+          ))}
         </div>
       </div>
     </section>

@@ -83,19 +83,18 @@ the auspicious union of two hearts`,
   gallery: [
     {
       image: '/client-images/gallery-1.jpg',
-      alt: 'Sacred wedding rituals',
+      alt: 'Shashi & Mangala',
+      caption: 'Together in Love',
     },
     {
       image: '/client-images/gallery-2.jpg',
-      alt: 'Family celebration and laughter',
+      alt: 'Cherished Celebrations',
+      caption: 'Joyful Moments',
     },
     {
       image: '/client-images/gallery-3.jpg',
-      alt: 'Traditional ornaments and garlands',
-    },
-    {
-      image: '/client-images/gallery-4.jpg',
-      alt: 'Mandapam glowing at dawn',
+      alt: 'Dancing Together',
+      caption: 'Dancing Into Eternity',
     },
   ],
 
@@ -139,7 +138,7 @@ the auspicious union of two hearts`,
     supabaseUrl: 'https://lyukxpzpcjedvrkwrcur.supabase.co',
     supabaseAnonKey: 'sb_publishable_7USKYo1sBAT7p3_kqWdrqg_RCxNm3yd',
     supabaseTable: 'rsvps',
-    googleSheetWebhookUrl: 'https://script.google.com/macros/s/AKfycbwLV_52cSrJPWpsMfFJrY4xZ-3iCV8WPR5612i-v9qB_koaaX1u6QfOU3tq5fDLq1b-Mg/exec',
+    googleSheetWebhookUrl: 'https://script.google.com/macros/s/AKfycbw2LwR9N5EFtWVOEdLVpDP5Y6H4Oba2FvWCghXqZqui_tbJmqSScPRtED7aLOgDwKXB/exec',
   },
 };
 
