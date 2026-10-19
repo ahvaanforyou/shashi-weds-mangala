@@ -18,12 +18,12 @@ export const weddingConfig = {
 
     brideRole: 'The Bride',
     brideParentsNote: 'Daughter of Smt. Lakshamamma and Sri Nanjundappa (Late).',
-    bridePhoto: '/assets/bride.jpg',
+    bridePhoto: '/assets/bride.jpg?v=2',
     bridePhotoAlt: 'Mangala, the bride',
 
     groomRole: 'The Groom',
     groomParentsNote: 'Son of Smt. Jayamma and Sri Sanjeeva.',
-    groomPhoto: '/assets/groom.jpg',
+    groomPhoto: '/assets/groom.jpg?v=2',
     groomPhotoAlt: 'Shashi Kumar, the groom',
   },
 
@@ -33,8 +33,10 @@ export const weddingConfig = {
   date: {
     label: 'Sunday, 25 October 2026',
     short: '25 . 10 . 2026',
+    stambaMuhurta: 'Stamba Muhurta on 24 Oct (7:30 AM – 9:00 AM)',
     muhurtham: 'Muhurtham at 4:30 AM',
     reception: 'Reception at 11:30 AM',
+    targetCountdownDate: '2026-10-24T07:30:00+05:30',
   },
 
   // -------------------------------------------------------------
@@ -43,8 +45,8 @@ export const weddingConfig = {
   invitation: {
     sanskritMantra: 'Om Sri Ganeshaya Namaha',
     invitationLine: 'With the blessings of God and our families, we cordially invite you to celebrate the wedding ceremony of Shashi & Mangala.',
-    familyLine: `Smt. Lakshamamma and Sri Nanjundappa (Late)
-Smt. Jayamma and Sri Sanjeeva
+    familyLine: `Smt. Jayamma and Sri Sanjeeva
+Smt. Lakshamamma and Sri Nanjundappa (Late)
 warmly invite you to celebrate
 the auspicious union of two hearts`,
     doorsButtonText: 'Tap to open the doors',
@@ -58,7 +60,7 @@ the auspicious union of two hearts`,
     name: 'Sri Bettalli Maramma convention hall',
     city: 'Hanuru, Chamarajanagar District, Karnataka',
     cityName: 'Hanuru', // Shows in "Join us in [City]"
-    locationUnderMap: 'Hanuru · Chamarajanagar District · 25 . 10 . 2026', // Text displayed directly under the map frame
+    locationUnderMap: 'Hanuru · Chamarajanagar District · 24 & 25 . 10 . 2026', // Text displayed directly under the map frame
     description: 'Follow the auspicious path to Sri Bettalli Maramma convention hall, where our families will be waiting to welcome you.',
     
     // Direct link when clicking "Open in maps"
@@ -104,9 +106,16 @@ the auspicious union of two hearts`,
   story: [],
 
   // -------------------------------------------------------------
-  // 8. ORDER OF CELEBRATIONS / EVENTS (EXACTLY TWO EVENTS)
+  // 8. ORDER OF CELEBRATIONS / EVENTS
   // -------------------------------------------------------------
   events: [
+    {
+      name: 'Stamba Muhurta',
+      day: 'Saturday, 24 October 2026',
+      time: '7:30 AM – 9:00 AM',
+      place: 'Sri Bettalli Maramma convention hall, Hanuru',
+      note: 'Traditional Stamba Muhurta & sacred pre-wedding rituals',
+    },
     {
       name: 'Muhurtham',
       day: 'Sunday, 25 October 2026',

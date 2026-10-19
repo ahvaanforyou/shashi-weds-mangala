@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 import { HeroSection } from './components/HeroSection';
+import { CountdownSection } from './components/CountdownSection';
 import { IntroSection } from './components/IntroSection';
 import { MeetCoupleSection } from './components/MeetCoupleSection';
 import { GallerySection } from './components/GallerySection';
@@ -39,6 +40,7 @@ export const App: React.FC = () => {
   return (
     <main>
       <HeroSection />
+      <CountdownSection />
       <IntroSection />
       <MeetCoupleSection />
       <GallerySection />

@@ -47,6 +47,7 @@ var HEADERS = [
   "Guest Name",
   "Contact (Phone / Email)",
   "Total Guests",
+  "Stamba Muhurta",
   "Muhurtham",
   "Reception",
   "Warm Wishes / Blessings"
@@ -318,6 +319,7 @@ function doPost(e) {
     var guestCount = Number(data.guest_count !== undefined ? data.guest_count : (data.guestCount || 1));
 
     // Independent event attendance (Yes / No)
+    var stambaMuhurta = (data.stambaMuhurta === "Yes" || data.stambaMuhurta === "yes" || (data.attending_events && data.attending_events.indexOf("Stamba") !== -1)) ? "Yes" : "No";
     var muhurtham = (data.muhurtham === "Yes" || data.muhurtham === "yes" || data.wedding === "Yes" || data.wedding === "yes" || (data.attending_events && (data.attending_events.indexOf("Muhurtham") !== -1 || data.attending_events.indexOf("Wedding") !== -1))) ? "Yes" : "No";
     var reception = (data.reception === "Yes" || data.reception === "yes" || (data.attending_events && data.attending_events.indexOf("Reception") !== -1)) ? "Yes" : "No";
 
@@ -329,7 +331,17 @@ function doPost(e) {
     var targetRow = isUpdate ? existingRow : Math.max(startRow, sheet.getLastRow() + 1);
     var displayTimestamp = isUpdate ? (baseTimestamp + " (Edited)") : baseTimestamp;
 
-    var rowValues = [
+    var numCols = sheet.getLastColumn() || 7;
+    var rowValues = numCols >= 8 ? [
+      displayTimestamp,
+      name,
+      contact,
+      guestCount,
+      stambaMuhurta,
+      muhurtham,
+      reception,
+      note
+    ] : [
       displayTimestamp,
       name,
       contact,

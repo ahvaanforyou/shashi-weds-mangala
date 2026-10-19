@@ -111,6 +111,7 @@ export const RsvpSection: React.FC = () => {
       guest_count: data.guestCount,
       attending_events: attendingList || "None",
       declined_events: declinedList || "None",
+      stambaMuhurta: attendance["Stamba Muhurta"] === "attending" ? "Yes" : "No",
       muhurtham: (attendance["Muhurtham"] === "attending" || attendance["Wedding"] === "attending") ? "Yes" : "No",
       reception: attendance["Reception"] === "attending" ? "Yes" : "No",
       wedding: (attendance["Muhurtham"] === "attending" || attendance["Wedding"] === "attending") ? "Yes" : "No",
