@@ -41,10 +41,10 @@ export const GratitudeSection: React.FC = () => {
               className="mx-auto w-20 sm:w-24"
             />
             <p className="eyebrow mt-7">With gratitude from both families</p>
-            <h2 className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-display text-2xl min-[360px]:text-3xl min-[480px]:text-5xl sm:text-7xl leading-[1.08] break-words">
-              <span className="text-gold-foil animate-foil">{weddingData.groom}</span>
+            <h2 className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-display text-2xl min-[360px]:text-3xl min-[480px]:text-5xl sm:text-7xl leading-[1.28] pb-2 overflow-visible break-words">
+              <span className="text-gold-foil animate-foil pb-1">{weddingData.groom}</span>
               <span className="mx-1.5 align-middle font-title text-lg sm:text-3xl text-maroon">&amp;</span>
-              <span className="text-gold-foil animate-foil">{weddingData.bride}</span>
+              <span className="text-gold-foil animate-foil pb-1">{weddingData.bride}</span>
             </h2>
             <p className="mt-7 font-title text-sm uppercase tracking-[0.32em] text-maroon sm:text-base">
               Thank you for blessing us

@@ -158,10 +158,10 @@ export const HeroSection: React.FC = () => {
               className="pointer-events-none absolute -top-16 left-1/2 w-28 -translate-x-1/2 opacity-60 sm:-top-20 sm:w-36"
             />
             <p className="invite-line eyebrow mt-6">{weddingData.dateShort}</p>
-            <h1 className="invite-line mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-display text-2xl min-[360px]:text-3xl min-[480px]:text-5xl sm:text-6xl md:text-7xl leading-[1.08] break-words">
-              <span className="text-gold-foil animate-foil">{weddingData.groom}</span>
+            <h1 className="invite-line mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-display text-2xl min-[360px]:text-3xl min-[480px]:text-5xl sm:text-6xl md:text-7xl leading-[1.28] pb-2 overflow-visible break-words">
+              <span className="text-gold-foil animate-foil pb-1">{weddingData.groom}</span>
               <span className="mx-1.5 font-title text-base sm:text-2xl md:text-3xl align-middle text-maroon">&amp;</span>
-              <span className="text-gold-foil animate-foil">{weddingData.bride}</span>
+              <span className="text-gold-foil animate-foil pb-1">{weddingData.bride}</span>
             </h1>
             <div className="invite-line rule-gold mx-auto mt-8 w-2/3" />
             <p className="invite-line mx-auto mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">

@@ -67,6 +67,13 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  display: inline-block;
+  padding-bottom: 0.28em;
+  margin-bottom: -0.28em;
+  padding-top: 0.05em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  overflow: visible;
 }
 
 .animate-foil {
