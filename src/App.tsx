@@ -8,7 +8,6 @@ import { ParallaxSection } from './components/ParallaxSection';
 import { EventsSection } from './components/EventsSection';
 import { VenueSection } from './components/VenueSection';
 import { RsvpSection } from './components/RsvpSection';
-import { BlessingsSection } from './components/BlessingsSection';
 import { GratitudeSection } from './components/GratitudeSection';
 import { Footer } from './components/Footer';
 import { MusicButton } from './components/MusicButton';
@@ -47,7 +46,6 @@ export const App: React.FC = () => {
       <EventsSection />
       <VenueSection />
       <RsvpSection />
-      <BlessingsSection />
       <GratitudeSection />
       <Footer />
       <MusicButton />
