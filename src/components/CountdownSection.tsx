@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { weddingConfig } from '../wedding.config';
 import { Ornament } from './Ornaments';
 import { RevealOnScroll } from './RevealOnScroll';
@@ -11,8 +11,8 @@ interface TimeLeft {
 }
 
 export const CountdownSection: React.FC = () => {
-  // Target date: Stamba Muhurta 24 October 2026 at 7:30 AM IST
-  const targetDateStr = weddingConfig.date.targetCountdownDate || '2026-10-24T07:30:00+05:30';
+  // Target date: Reception 25 October 2026 at 9:00 AM IST
+  const targetDateStr = weddingConfig.date.targetCountdownDate || '2026-10-25T09:00:00+05:30';
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => {
     const target = new Date(targetDateStr).getTime();

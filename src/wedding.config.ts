@@ -35,8 +35,8 @@ export const weddingConfig = {
     short: '25 . 10 . 2026',
     stambaMuhurta: 'Stamba Muhurta on 24 Oct (7:30 AM – 9:00 AM)',
     muhurtham: 'Muhurtham at 4:30 AM',
-    reception: 'Reception at 11:30 AM',
-    targetCountdownDate: '2026-10-24T07:30:00+05:30',
+    reception: 'Reception at 9:00 AM',
+    targetCountdownDate: '2026-10-25T09:00:00+05:30',
   },
 
   // -------------------------------------------------------------
@@ -93,11 +93,6 @@ the auspicious union of two hearts`,
       alt: 'Cherished Celebrations',
       caption: 'Joyful Moments',
     },
-    {
-      image: '/client-images/gallery-3.jpg',
-      alt: 'Dancing Together',
-      caption: 'Dancing Into Eternity',
-    },
   ],
 
   // -------------------------------------------------------------
@@ -126,7 +121,7 @@ the auspicious union of two hearts`,
     {
       name: 'Reception',
       day: 'Sunday, 25 October 2026',
-      time: '11:30 AM',
+      time: '9:00 AM',
       place: 'Sri Bettalli Maramma convention hall, Hanuru',
       note: 'Wedding reception celebrations & feast',
     },

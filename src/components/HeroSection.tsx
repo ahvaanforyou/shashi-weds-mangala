@@ -169,7 +169,7 @@ export const HeroSection: React.FC = () => {
             </p>
             <p className="invite-line mt-8 font-title text-lg tracking-wide">{weddingData.dateLabel}</p>
             <p className="invite-line mt-1 text-sm text-muted-foreground">
-              {weddingData.muhurtham} · {weddingData.venue}, {weddingData.city}
+              {weddingData.reception} · {weddingData.venue}, {weddingData.city}
             </p>
             <a
               href="#rsvp"

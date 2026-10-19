@@ -19,7 +19,7 @@ export const GallerySection: React.FC = () => {
           <div className="rule-gold mx-auto mt-8 w-32" />
         </RevealOnScroll>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
           {weddingConfig.gallery.map((item, idx) => (
             <RevealOnScroll key={idx} delay={idx * 0.12}>
               <figure className="group relative aspect-[3/4] overflow-hidden border border-gold/40 bg-muted shadow-[var(--shadow-card)] transition-shadow duration-500 hover:shadow-xl">
