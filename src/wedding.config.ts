@@ -108,7 +108,7 @@ the auspicious union of two hearts`,
       name: 'Stamba Muhurta',
       day: 'Saturday, 24 October 2026',
       time: '7:30 AM – 9:00 AM',
-      place: 'Sri Bettalli Maramma convention hall, Hanuru',
+      place: 'Ellemala, Hanur Taluk, Chamarajanagar District',
       note: 'Traditional Stamba Muhurta & sacred pre-wedding rituals',
     },
     {
