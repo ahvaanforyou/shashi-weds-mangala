@@ -105,7 +105,16 @@ export const RsvpSection: React.FC = () => {
     };
 
     setIsSubmitting(true);
-    await saveRsvp({
+
+    // Save locally immediately
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch {
+      // ignore storage errors
+    }
+
+    // Fire network sync
+    const syncPromise = saveRsvp({
       name: data.name,
       email: data.contact,
       guest_count: data.guestCount,
@@ -121,17 +130,17 @@ export const RsvpSection: React.FC = () => {
       originalName: prevName,
       submissionId: currentSubmissionId,
     });
+
+    // Snappy UX: give a 350ms micro-interaction then instantly show success
+    await Promise.race([
+      syncPromise,
+      new Promise((resolve) => setTimeout(resolve, 350)),
+    ]);
+
     setIsSubmitting(false);
     setIsEditing(false);
     setOriginalContact(data.contact);
     setOriginalName(data.name);
-
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    } catch {
-      // ignore storage errors
-    }
-
     setSubmitted(data);
   };
 

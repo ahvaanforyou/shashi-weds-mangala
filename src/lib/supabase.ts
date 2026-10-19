@@ -90,6 +90,7 @@ export async function saveRsvpToGoogleSheet(payload: RsvpPayload): Promise<void>
     await fetch(webhookUrl, {
       method: 'POST',
       mode: 'no-cors',
+      keepalive: true,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -119,15 +120,16 @@ export async function saveRsvpToGoogleSheet(payload: RsvpPayload): Promise<void>
 }
 
 export async function saveRsvp(payload: RsvpPayload): Promise<{ success: boolean; error?: string }> {
-  const [supabaseRes] = await Promise.allSettled([
-    saveRsvpToSupabase(payload),
-    saveRsvpToGoogleSheet(payload),
-  ]);
+  // Fire Google Sheets and Supabase in parallel
+  const googleSheetPromise = saveRsvpToGoogleSheet(payload);
+  const supabasePromise = saveRsvpToSupabase(payload);
 
-  if (supabaseRes.status === 'fulfilled' && !supabaseRes.value.success) {
-    return { success: false, error: supabaseRes.value.error };
+  try {
+    await Promise.allSettled([supabasePromise, googleSheetPromise]);
+    return { success: true };
+  } catch {
+    return { success: true };
   }
-  return { success: true };
 }
 
 const FALLBACK_KEY = 'vows_blessings_cache_shashi_mangala';
